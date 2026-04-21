@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Ubuntu:wght@700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Ubuntu', sans-serif;
+    background-image: url('img/fundo.png'); 
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.banner-resultado {
+    background: linear-gradient(to bottom, #4a90e2, #2e86c1);
+    border: 4px solid #003366;
+    border-radius: 15px;
+    padding: 10px 80px;
+    margin-top: 25px;
+    text-align: center;
+    box-shadow: 0 6px 0 #003366;
+}
+
+.banner-resultado h2 {
+    color: white;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 3rem;
+    margin: 0;
+    -webkit-text-stroke: 1.5px #000;
+}
+
+#puffle-nome {
+    color: white;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 2.8rem;
+    margin: 0;
+    -webkit-text-stroke: 1.5px #000;
+}
+
+.resultado-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    max-width: 1100px;
+    position: relative;
+}
+
+.caixa-texto {
+    background-color: #003366;
+    border: 4px solid white;
+    border-radius: 60px;
+    color: white;
+    padding: 40px;
+    width: 550px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    z-index: 2;
+    position: relative;
+}
+
+.caixa-texto h4 {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 2.2rem;
+    margin: 0 0 20px 0;
+    text-align: center;
+    -webkit-text-stroke: 0.5px #000;
+}
+
+.caixa-texto p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    text-align: center;
+    font-weight: bold;
+}
+
+.puffle-display {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    margin-left: -80px; 
+    z-index: 3;
+}
+
+.puffle-display img {
+    position: absolute;
+    height: auto;
+    filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.3));
+}
+
+.puffle-display img:nth-child(1) {
+    width: 200px;
+    bottom: 20px;
+    left: 0;
+    z-index: 6;
+}
+
+.puffle-display img:nth-child(2) {
+    width: 180px;
+    top: 20px;
+    right: 40px;
+    z-index: 4;
+}
+
+.puffle-display img:nth-child(3) {
+    width: 180px;
+    bottom: 40px;
+    right: -20px;
+    z-index: 5;
+}
+
+.footer-resultado {
+    width: 100%;
+    padding: 0 50px 40px 50px;
+    display: flex;
+    align-items: flex-end;
+    box-sizing: border-box;
+    gap: 25px;
+}
+
+.btn-jogar {
+    background: #3498db;
+    border: 4px solid #003366;
+    border-radius: 20px;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    font-size: 1.6rem;
+    padding: 15px 35px;
+    cursor: pointer;
+    box-shadow: 0 6px 0 #003366;
+}
+
+.btn-creditos {
+    text-decoration: none;
+}
+
+.creditos-box {
+    background: #3498db;
+    border: 4px solid #003366;
+    border-radius: 35px;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 6px 0 #003366;
+}
+
+.creditos-box img {
+    width: 55px;
+}
+
+.creditos-box span {
+    color: white;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 1.1rem;
+    -webkit-text-stroke: 1px #000;
+}

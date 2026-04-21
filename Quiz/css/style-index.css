@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Ubuntu:wght@700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('img/fundo.png'); 
+    background-size: cover;
+    background-position: center;
+    font-family: 'Ubuntu', sans-serif;
+    overflow: hidden;
+}
+
+#container {
+    width: 900px;
+    height: 600px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#titulo {
+    background: linear-gradient(to bottom, #4a90e2, #357abd);
+    border: 4px solid #003366;
+    border-bottom: none; 
+    border-radius: 20px 20px 0 0;
+    padding: 20px 40px 0 40px;
+    text-align: center;
+    color: white;
+    width: 80%;
+    z-index: 2;
+    margin: 0 auto;
+}
+
+#titulo h1 {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 3.2rem;
+    margin: 0;
+    -webkit-text-stroke: 2px #003366;
+    text-shadow: 2px 4px 0px rgba(0,0,0,0.2);
+    letter-spacing: 2px;
+    white-space: nowrap; 
+}
+
+#subtitulo {
+    background: #357abd; 
+    border: 4px solid #003366;
+    border-top: none; 
+    border-radius: 0 0 20px 20px;
+    padding: 10px 40px 25px 40px;
+    text-align: center;
+    color: white;
+    width: 80%;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    margin: -1px auto 40px auto; 
+}
+
+#subtitulo p {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+#descricao {
+    background-color: #004a8d;
+    border: 4px solid white;
+    border-radius: 40px;
+    padding: 25px 35px;
+    color: white;
+    width: 350px;
+    position: absolute;
+    left: 20px;
+    top: 260px; 
+    line-height: 1.4;
+    font-size: 1.05rem;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 5;
+}
+
+.puffles-img {
+    position: absolute;
+    right: 20px;           
+    bottom: 110px;      
+    width: 420px;     
+    z-index: 1;         
+    pointer-events: none; 
+}
+
+#botao {
+    position: absolute;
+    bottom: 15px;
+    z-index: 10;
+}
+
+#botao button {
+    background: linear-gradient(to bottom, #5dade2, #2e86c1);
+    color: #f1f1f1;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 2.8rem;
+    padding: 12px 60px;
+    border: 4px solid #003366;
+    border-radius: 18px;
+    cursor: pointer;
+    box-shadow: 0 8px 0 #003366;
+    transition: all 0.1s ease-in-out;
+}
+
+#botao button:hover {
+    background: linear-gradient(to bottom, #aed6f1, #5dade2);
+    transform: scale(1.03);
+}
+
+#botao button:active {
+    transform: translateY(6px);
+    box-shadow: 0 2px 0 #003366;
+}
+
+#botao a {
+    text-decoration: none;
+    display: inline-block;
+}

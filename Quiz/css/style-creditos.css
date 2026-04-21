@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Ubuntu:wght@700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Ubuntu', sans-serif;
+    background-image: url('img/fundo.png'); 
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+header {
+    width: 100%;
+    padding: 20px 40px;
+    box-sizing: border-box; 
+}
+
+#btn-home {
+    background: #3498db;
+    border: 3px solid #003366;
+    border-radius: 10px;
+    color: white;
+    font-family: 'Luckiest Guy', cursive;
+    padding: 8px 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 0 #003366;
+    text-transform: uppercase;
+}
+
+#btn-home:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 #003366;
+}
+
+.banner-titulo {
+    background: linear-gradient(to bottom, #4a90e2, #2e86c1);
+    border: 4px solid #003366;
+    border-radius: 15px;
+    padding: 10px 100px;
+    margin-top: -10px;
+    box-shadow: 0 6px 0 #003366;
+}
+
+.banner-titulo h2 {
+    color: white;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 3.5rem;
+    margin: 0;
+    -webkit-text-stroke: 1.5px #000;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.grid-creditos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 120px;
+    margin-top: 60px;
+    width: 80%;
+    max-width: 900px;
+}
+
+.membro-equipe {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.membro-equipe img {
+    width: 90px;
+    height: auto;
+}
+
+.membro-equipe span {
+    color: white;
+    font-size: 3.8rem;
+    font-weight: bold;
+    -webkit-text-stroke: 2px #000;
+    text-shadow: 3px 3px 0px rgba(0,0,0,0.2);
+}
+
+hr { display: none; }

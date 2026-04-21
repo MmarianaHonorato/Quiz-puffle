@@ -1,44 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <title>QUIZ</title>
+    <link rel="stylesheet" href="../css/style-quiz.css">
 </head>
+
 <body>
 
-    <div>
+    <header class="navbar">
+
         <a href="index.html">
-            <button>Home</button>
+            <button class="nav-btn">Home</button>
         </a>
 
-        <span>Qual Puffle você é?</span>
+        <span class="quiz-title">Qual Puffle você é?</span>
 
         <a href="creditos.html">
-            <button>Créditos</button>
+            <button class="nav-btn">Créditos</button>
         </a>
-    </div>
 
-    <hr>
+    </header>
 
-    <h3 id="titulo">1ª Pergunta</h3>
-    <p id="pergunta">Qual é seu passatempo?</p>
+    <main class="quiz-container">
+        <div class="pergunta-box">
+            <h3 id="titulo">1ª Pergunta</h3>
+            <p id="pergunta">Qual é seu passatempo?</p>
+        </div>
 
-   
-    <div id="opcoes">
-        <input type="radio" name="resposta"> Ouvir música<br>
-        <input type="radio" name="resposta"> Praticar esportes<br>
-        <input type="radio" name="resposta"> Dançar<br>
-    </div>
+        <div id="opcoes">
+            <button class="option-btn" name="resposta"> Ouvir música<br>
+                <button class="option-btn" name="resposta"> Praticar esportes<br>
+                    <button class="option-btn" name="resposta"> Dançar<br>
+        </div>
 
-    <p id="contador">1/10</p>
-    <br>
-
-    <button id="btnVoltar">Voltar</button>
-    <button id="btnProxima">Próxima</button>
-
-    <a href="resultado.html">
-        <button id="btnFinalizar">Finalizar quiz</button>
-    </a>
+        <div class="footer-quiz">
+            <a href="index.html"><button id="btnVoltar">Voltar</button></a>
+            <p id="contador">1/10</p>
+            <a href="resultado.html"><button id="btnProxima">Próxima</button></a>
+        </div>
+    </main>
 
 </body>
+
 </html>
