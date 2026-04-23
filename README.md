@@ -29,8 +29,8 @@ Este é um projeto front-end estático. Não há necessidade de instalar depend�
 ## 👥 Equipe de Desenvolvimento
 Projeto desenvolvido colaborativamente por:
 
-Leticia Delmilio Soares
-Marcos Vinicius Nunes Moreira 
-Maria Luiza Ricardo Fernandes 
-Mariana Cardoso Honorato
-Paulo Vinícius Sousa Lima
+* Leticia Delmilio Soares
+* Marcos Vinicius Nunes Moreira 
+* Maria Luiza Ricardo Fernandes 
+* Mariana Cardoso Honorato
+* Paulo Vinícius Sousa Lima
