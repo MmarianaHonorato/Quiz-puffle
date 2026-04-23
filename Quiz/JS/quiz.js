@@ -13,7 +13,7 @@ const perguntas = [
         texto: "Se você fosse dar uma festa, como ela seria?",
         opcoes: [
             { texto: "Uma noite de jogos (tabuleiro, RPG ou fliperama) super competitiva e cheia de risadas!", pontuacao: [ { cor: "Verde", valor: 5 }, { cor: "Marrom", valor: 3 } ] },
-            { texto: "Uma reunião bem pequena, só pros mais chegados, com pouca luz e uma playlist rock/alternativa.", pontuacao: [ { cor: "Preto", valor: 7 }, { cor: "Vermelho", valor: 2 } ] },
+            { texto: "Uma reunião bem pequena, só pros mais chegados, com pouca luz e uma playlist alternativa.", pontuacao: [ { cor: "Preto", valor: 7 }, { cor: "Vermelho", valor: 2 } ] },
             { texto: "Uma festa super criativa e temática, talvez uma noite do pijama com cinema e pintura.", pontuacao: [ { cor: "Amarelo", valor: 5 }, { cor: "Azul", valor: 3 } ] }
         ]
     },
@@ -57,8 +57,8 @@ const perguntas = [
         titulo: "7ª Pergunta",
         texto: "Qual estilo musical mais aparece nas suas playlists?",
         opcoes: [
-            { texto: "MPB, acústico, lo-fi ou trilhas sonoras. Músicas perfeitas para relaxar e se inspirar.", pontuacao: [ { cor: "Azul", valor: 5 }, { cor: "Amarelo", valor: 3 } ] },
-            { texto: "Rock, metal, trap, rap ou eletrônica pesada. Aquela batida intensa e marcante.", pontuacao: [ { cor: "Preto", valor: 7 }, { cor: "Vermelho", valor: 3 } ] },
+            { texto: "MPB, acústico ou trilhas sonoras. Músicas perfeitas para relaxar e se inspirar.", pontuacao: [ { cor: "Azul", valor: 5 }, { cor: "Amarelo", valor: 3 } ] },
+            { texto: "Rock, metal, trap, rap ou eletrônica. Aquela batida intensa e marcante.", pontuacao: [ { cor: "Preto", valor: 7 }, { cor: "Vermelho", valor: 3 } ] },
             { texto: "Trilhas sonoras épicas de jogos, synthwave ou podcasts sobre ciência e curiosidades.", pontuacao: [ { cor: "Marrom", valor: 5 }, { cor: "Verde", valor: 2 } ] }
         ]
     },
@@ -84,9 +84,9 @@ const perguntas = [
         titulo: "10ª Pergunta",
         texto: "O que você escolheria como o seu lanche perfeito?",
         opcoes: [
-            { texto: "O clássico lanche da madrugada para virar a noite: pizza da noite anterior, salgadinhos e um energético.", pontuacao: [ { cor: "Amarelo", valor: 5 }, { cor: "Marrom", valor: 3 } ] },
+            { texto: "O clássico lanche da madrugada para virar a noite: pizza, salgadinhos e um energético.", pontuacao: [ { cor: "Amarelo", valor: 5 }, { cor: "Marrom", valor: 3 } ] },
             { texto: "Algo bem exótico, intenso ou apimentado, que poucas pessoas teriam coragem de comer.", pontuacao: [ { cor: "Preto", valor: 5 }, { cor: "Vermelho", valor: 3 } ] },
-            { texto: "Uma comida rápida e prática pra comer em pé mesmo, ou vários doces divertidos para dividir com a galera.", pontuacao: [ { cor: "Verde", valor: 7 }, { cor: "Azul", valor: 3 } ] }
+            { texto: "Uma comida rápida e prática, ou vários doces divertidos para dividir com a galera.", pontuacao: [ { cor: "Verde", valor: 7 }, { cor: "Azul", valor: 3 } ] }
         ]
     }
 ];
