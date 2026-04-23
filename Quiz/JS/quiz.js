@@ -91,92 +91,95 @@ const perguntas = [
     }
 ];
 
-let indiceAtual = 0;
+class QuizPuffles {
+    constructor(listaPerguntas) {
+        this.perguntas = listaPerguntas;
+        this.indiceAtual = 0;
+        
+        this.placar = {
+            Azul: 0.0001,
+            Vermelho: 0.0002,
+            Verde: 0.0003,
+            Marrom: 0.0004,
+            Amarelo: 0.0005,
+            Preto: 0.0006
+        };
 
-const titulo = document.getElementById("titulo");
-const pergunta = document.getElementById("pergunta");
-const resposta1 = document.getElementById("resposta1");
-const resposta2 = document.getElementById("resposta2");
-const resposta3 = document.getElementById("resposta3");
+        this.titulo = document.getElementById("titulo");
+        this.pergunta = document.getElementById("pergunta");
+        this.resposta1 = document.getElementById("resposta1");
+        this.resposta2 = document.getElementById("resposta2");
+        this.resposta3 = document.getElementById("resposta3");
 
-let placar = {
-    Azul: 0.0001,
-    Vermelho: 0.0002,
-    Verde: 0.0003,
-    Marrom: 0.0004,
-    Amarelo: 0.0005,
-    Preto: 0.0006
-};
+        this.inicializarEventos();
+    }
 
-function carregarPergunta() {
-    const p = perguntas[indiceAtual];
-    
-    console.log(`\n======================================`);
-    console.log(`Carregando: ${p.titulo}`);
-    console.log(`======================================`);
+    inicializarEventos() {
+        this.resposta1.addEventListener("click", (e) => { e.preventDefault(); this.lidarComClique(0); });
+        this.resposta2.addEventListener("click", (e) => { e.preventDefault(); this.lidarComClique(1); });
+        this.resposta3.addEventListener("click", (e) => { e.preventDefault(); this.lidarComClique(2); });
+    }
 
-    titulo.innerText = p.titulo;
-    pergunta.innerText = p.texto;
-    
-    resposta1.innerText = p.opcoes[0].texto;
-    resposta2.innerText = p.opcoes[1].texto;
-    resposta3.innerText = p.opcoes[2].texto;
-}
+    carregarPergunta() {
+        const p = this.perguntas[this.indiceAtual];
+        
+        console.log(`\n======================================`);
+        console.log(`Carregando: ${p.titulo}`);
+        console.log(`======================================`);
 
-function registrarResposta(indiceDaOpcaoEscolhida) {
-    let opcaoMapeada = perguntas[indiceAtual].opcoes[indiceDaOpcaoEscolhida];
-    let pontosGanhos = opcaoMapeada.pontuacao;
+        this.titulo.innerText = p.titulo;
+        this.pergunta.innerText = p.texto;
+        
+        this.resposta1.innerText = p.opcoes[0].texto;
+        this.resposta2.innerText = p.opcoes[1].texto;
+        this.resposta3.innerText = p.opcoes[2].texto;
+    }
 
-    console.log(`>> Você clicou no Botão ${indiceDaOpcaoEscolhida + 1}`);
-    console.log(`Texto: "${opcaoMapeada.texto}"`);
+    registrarResposta(indiceDaOpcaoEscolhida) {
+        let opcaoMapeada = this.perguntas[this.indiceAtual].opcoes[indiceDaOpcaoEscolhida];
+        let pontosGanhos = opcaoMapeada.pontuacao;
 
-    pontosGanhos.forEach(item => {
-        placar[item.cor] += item.valor; 
+        console.log(`>> Você clicou no Botão ${indiceDaOpcaoEscolhida + 1}`);
+        console.log(`Texto: "${opcaoMapeada.texto}"`);
 
-        console.log(`Adicionado +${item.valor} pontos para o Puffle ${item.cor}. (Total do ${item.cor}: ${placar[item.cor]})`);
-    });
+        pontosGanhos.forEach(item => {
+            this.placar[item.cor] += item.valor; 
+            console.log(`Adicionado +${item.valor} pontos para o Puffle ${item.cor}. (Total do ${item.cor}: ${this.placar[item.cor]})`);
+        });
 
-    console.log(`\n PLACAR ATUALIZADO:`);
-    console.table(placar);
-}
+        console.log(`\n PLACAR ATUALIZADO:`);
+        console.table(this.placar);
+    }
 
-function calcularVencedor() {
-    let puffleVencedor = "";
-    let maiorPontuacao = 0;
 
-    console.log(`\n======================================`);
-    console.log(`FIM DO QUIZ! CALCULANDO O VENCEDOR...`);
-    console.log(`======================================`);
+    calcularVencedor() {
+        let puffleVencedor = "";
+        let maiorPontuacao = 0;
 
-    for (let cor in placar) {
-        if (placar[cor] > maiorPontuacao) {
-            maiorPontuacao = placar[cor]; 
-            puffleVencedor = cor;         
+        for (let cor in this.placar) {
+            if (this.placar[cor] > maiorPontuacao) {
+                maiorPontuacao = this.placar[cor]; 
+                puffleVencedor = cor;         
+            }
+        }
+
+        localStorage.setItem("puffleVencedor", puffleVencedor);
+        localStorage.setItem("pufflePontuacao", Math.floor(maiorPontuacao)); 
+
+        window.location.href = "resultado.html";
+    }
+    lidarComClique(indiceBotao) {
+        this.registrarResposta(indiceBotao);
+
+        if (this.indiceAtual < this.perguntas.length - 1) {
+            this.indiceAtual++;
+            this.carregarPergunta();
+        } else {
+            this.calcularVencedor();
         }
     }
-
-    console.log(`O GRANDE VENCEDOR É O PUFFLE ${puffleVencedor.toUpperCase()}!`);
-    console.log(`Pontuação Exata: ${maiorPontuacao}`);
-    console.log(`Salvando no localStorage e mudando de página...`);
-
-    localStorage.setItem("puffleVencedor", puffleVencedor);
-    window.location.href = "resultado.html";
 }
-
-function lidarComClique(indiceBotao) {
-    registrarResposta(indiceBotao);
-
-    if (indiceAtual < perguntas.length - 1) {
-        indiceAtual++;
-        carregarPergunta();
-    } else {
-        calcularVencedor();
-    }
-}
-
-resposta1.addEventListener("click", (e) => { e.preventDefault(); lidarComClique(0); });
-resposta2.addEventListener("click", (e) => { e.preventDefault(); lidarComClique(1); });
-resposta3.addEventListener("click", (e) => { e.preventDefault(); lidarComClique(2); });
 
 console.log("INICIANDO O JOGO...");
-carregarPergunta();
+const meuQuiz = new QuizPuffles(perguntas);
+meuQuiz.carregarPergunta();
