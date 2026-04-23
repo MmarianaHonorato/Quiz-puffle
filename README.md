@@ -26,11 +26,11 @@ Durante o jogo, os pontos inteiros (ex: +7, +5) são somados normalmente de acor
 ## 🚀 Como Executar o Projeto Localmente
 Este é um projeto front-end estático. Não há necessidade de instalar dependências (como Node.js) ou configurar um servidor local.
 
-##👥 Equipe de Desenvolvimento
+## 👥 Equipe de Desenvolvimento
 Projeto desenvolvido colaborativamente por:
 
-*Leticia Delmilio Soares
-*Marcos Vinicius Nunes Moreira 
-*Maria Luiza Ricardo Fernandes 
-*Mariana Cardoso Honorato
-*Paulo Vinícius Sousa Lima
+Leticia Delmilio Soares
+Marcos Vinicius Nunes Moreira 
+Maria Luiza Ricardo Fernandes 
+Mariana Cardoso Honorato
+Paulo Vinícius Sousa Lima
