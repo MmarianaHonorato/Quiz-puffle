@@ -92,23 +92,23 @@ body {
 }
 
 .puffle-display img:nth-child(1) {
-    width: 200px;
+    width: 190px;
     bottom: 20px;
-    left: 0;
+    left: 30px;
     z-index: 6;
 }
 
 .puffle-display img:nth-child(2) {
     width: 180px;
-    top: 20px;
-    right: 40px;
+    top: -50px;
+    right: 60px;
     z-index: 4;
 }
 
 .puffle-display img:nth-child(3) {
     width: 180px;
     bottom: 40px;
-    right: -20px;
+    right: -50px;
     z-index: 5;
 }
 
